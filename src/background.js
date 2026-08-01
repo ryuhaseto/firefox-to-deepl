@@ -1,5 +1,5 @@
 // const deeplURL = "https://www.deepl.com/translator/q/auto/"
-const deeplURL = "https://www.deepl.com/translator#en/"
+const deeplURL = "https://www.deepl.com/translator#auto/"
 let w = 940;
 const h = 650;
 let defaultLang = "en-US"

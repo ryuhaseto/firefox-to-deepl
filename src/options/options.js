@@ -1,6 +1,6 @@
 // array of languages to populate the select element
 const languages = [
-  { name: "English", value: "en" },
+  { name: "English (American)", value: "en-US" },
   { name: "اَلْعَرَبِيَّةُ", value: "ar" },
   { name: "Български", value: "bg" },
   { name: "Čeština (Český)", value: "cs" },
@@ -44,7 +44,7 @@ function renderOptions() {
   });
 
   return browser.storage.local.get(['defaultLang', 'windowType']).then((store) => {
-    document.getElementById('defaultLang').value = store.defaultLang || 'en';
+    document.getElementById('defaultLang').value = store.defaultLang || 'en-US';
 
     if (store.windowType) {
       document.getElementById(store.windowType).checked = true;
@@ -52,7 +52,7 @@ function renderOptions() {
   });
 }
 
-document.getElementById('defaultLang').addEventListener('click', (e) => {
+document.getElementById('defaultLang').addEventListener('change', (e) => {
   if (languages.some((lang) => lang.value === e.target.value)) {
     browser.storage.local.set({
       defaultLang: e.target.value

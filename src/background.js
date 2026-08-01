@@ -2,7 +2,7 @@
 const deeplURL = "https://www.deepl.com/translator#en/"
 let w = 940;
 const h = 650;
-let defaultLang = "en"
+let defaultLang = "en-US"
 let windowType = "popup"
 
 function getDefaultSettings() {
